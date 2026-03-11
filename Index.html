@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livraria Digital</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #fafafa;
+        color: #333;
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+      }
+
+      /* Formulário Slim */
+      #formCadastro {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background: #fff;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        outline: none;
+      }
+
+      input:focus {
+        border-color: #000;
+      }
+
+      button {
+        padding: 12px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      button:hover {
+        background: #333;
+      }
+
+      /* Lista de Livros */
+      #cards {
+        margin-top: 30px;
+      }
+
+      #cards div {
+        background: #fff;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #eee;
+      }
+
+      #cards p {
+        color: #666;
+        margin: 0;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="formCadastro">
+      <input type="text" id="tituloInput" placeholder="Adicionar título..." />
+      <input type="text" id="precoInput" placeholder="Adicionar preço..." />
+      <button id="adicionarAutorBtn" type="submit">Adicionar Livro</button>
+      <select name="autor" id="autor" required></select>
+    </form>
+
+    <div id="cards"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
